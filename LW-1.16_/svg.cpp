@@ -16,7 +16,7 @@ using namespace std;
 void
 svg_begin(double width, double height) {
     ofstream file;
-    file.open("/Users/macbook/Desktop/универ/lab/2_sem/LW-1.16_/LW-1.16_/marks.svg");
+    file.open("/Users/macbook/Desktop/LW-1.16_/LW-1.16_/marks.svg");
     file << "<?xml version='1.0' encoding='UTF-8'?>\n";
     file << "<svg ";
     file << "width='" << width << "' ";
@@ -29,21 +29,21 @@ svg_begin(double width, double height) {
 void
 svg_end() {
     ofstream file;
-    file.open("/Users/macbook/Desktop/универ/lab/2_sem/LW-1.16_/LW-1.16_/marks.svg", ios_base::app);
+    file.open("/Users/macbook/Desktop/LW-1.16_/LW-1.16_/marks.svg", ios_base::app);
     file << "</svg>\n";
     file.close();
 }
 
 void svg_text(double left, double baseline, string text){
     ofstream file;
-    file.open("/Users/macbook/Desktop/универ/lab/2_sem/LW-1.16_/LW-1.16_/marks.svg", ios_base::app);
+    file.open("/Users/macbook/Desktop/LW-1.16_/LW-1.16_/marks.svg", ios_base::app);
     file << "<text x='" << left << "' y='" << baseline << "'>" << text << "</text>";
 }
 
 void svg_rect(double x, double y, double width, double height, string color){
     
     ofstream file;
-    file.open("/Users/macbook/Desktop/универ/lab/2_sem/LW-1.16_/LW-1.16_/marks.svg", ios_base::app);
+    file.open("/Users/macbook/Desktop/LW-1.16_/LW-1.16_/marks.svg", ios_base::app);
     file << "<rect x='" << x << "' y='" << y << "' width='" << width << "' height='" << height << "' stroke='"<< color <<"' fill='"<< color <<"'/>";
 }
 

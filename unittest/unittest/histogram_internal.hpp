@@ -13,7 +13,7 @@
 
 using namespace std;
 
-void find_minmax(const std::vector<double>& numbers, double& min, double& max);
+bool find_minmax(const std::vector<double>& numbers, double& min, double& max);
 
 void show_histogram_text(std::vector<size_t> bins, double maxBin, size_t binCount);
 

@@ -15,7 +15,12 @@ using namespace std;
 
 
 
-void find_minmax(const vector<double>& numbers, double& min, double& max) {
+bool find_minmax(const vector<double>& numbers, double& min, double& max) {
+
+    if (numbers.size() == 0){
+        return 0;
+    }
+    
     min = numbers[0];
     max = min;
     for (int i = 1; i<numbers.size(); i++){
@@ -26,6 +31,7 @@ void find_minmax(const vector<double>& numbers, double& min, double& max) {
             max = numbers[i];
         }
     }
+    return 1;
 }
 
 vector<size_t> make_histogram(const vector<double>& numbers, size_t bincount, size_t numberCount){
